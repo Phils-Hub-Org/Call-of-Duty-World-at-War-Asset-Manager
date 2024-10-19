@@ -1,6 +1,6 @@
 from PySide6.QtWidgets import QApplication
 from Core.main_window import MainWindow
-from Core.converter import Converter
+from Core.asset_manager import AssetManager
 
 class Entry:
 
@@ -10,8 +10,8 @@ class Entry:
         # Initialize main window
         cls.mainWindow = MainWindow()
 
-        # Initialize converter
-        cls.converter = Converter(cls.mainWindow)
+        # Initialize asset manager
+        cls.assetManager = AssetManager(cls.mainWindow)
 
         # Show main window
         cls.mainWindow.show()

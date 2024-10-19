@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'main_windoweqSKMd.ui'
+## Form generated from reading UI file 'main_windowshHqUV.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.7.2
 ##
@@ -21,7 +21,7 @@ from PySide6.QtWidgets import (QApplication, QFrame, QHBoxLayout, QLabel,
     QMenu, QMenuBar, QPushButton, QSizePolicy,
     QSpacerItem, QStatusBar, QToolBar, QVBoxLayout,
     QWidget)
-import resources_rc
+import Resources.resources_rc
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -32,8 +32,6 @@ class Ui_MainWindow(object):
         MainWindow.setStyleSheet(u"/* Central Widget */\n"
 "QWidget#centralwidget {\n"
 "    background-color: #1e1e1e;  /* Dark gray background */\n"
-"    border: none;               /* No border for a cleaner look */\n"
-"    padding: 15px;              /* Padding inside the central widget */\n"
 "}\n"
 "\n"
 "/* QMenuBar */\n"
@@ -45,7 +43,7 @@ class Ui_MainWindow(object):
 "\n"
 "QMenuBar::item {\n"
 "    background-color: transparent; /* Transparent background */\n"
-"    padding: 6px 12px;             /* Padding for menu items */\n"
+"    padding: 6px 6px;             /* Padding for menu items */\n"
 "    color: #ffffff;                /* White text */\n"
 "}\n"
 "\n"
@@ -55,12 +53,12 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QMenuBar::item:pressed {           /* Pressed menu item */\n"
-"    bac"
-                        "kground-color: #3d78b2;     /* Darker blue on press */\n"
+"    background-color: #3d78b2;     /* Darker blue on press */\n"
 "    color: #ffffff;                /* Ensure text remains white */\n"
 "}\n"
 "\n"
-"/* QMenu */\n"
+"/* QMen"
+                        "u */\n"
 "QMenu {\n"
 "    background-color: #2e2e2e;     /* Dark gray background for menus */\n"
 "    border: 1px solid #5b5e60;     /* Light gray border */\n"
@@ -80,13 +78,13 @@ class Ui_MainWindow(object):
 "\n"
 "QMenu::item:pressed {              /* Pressed menu item */\n"
 "    background-color: #3d78b2;     /* Darker blue background on press */\n"
-"    color: #ffffff;                /"
-                        "* Ensure text remains white */\n"
+"    color: #ffffff;                /* Ensure text remains white */\n"
 "}\n"
 "\n"
 "QMenu::separator {\n"
 "    height: 1px;\n"
-"    background-color: #5b5e60;     /* Light gray separator between items */\n"
+"    background-color: #5b5e60;     /* Light gray separator"
+                        " between items */\n"
 "    margin: 6px 0;                 /* Spacing around the separator */\n"
 "}\n"
 "\n"
@@ -110,10 +108,10 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "/* Submenus */\n"
-"QMen"
-                        "u::right-arrow {\n"
+"QMenu::right-arrow {\n"
 "    image: url(':/icons/right-arrow.png'); /* Replace with an appropriate icon path */\n"
-"    padding: 0px 10px;                     /* Space before submenu arrows */\n"
+"    padding: 0px 10px;              "
+                        "       /* Space before submenu arrows */\n"
 "}\n"
 "\n"
 "/* QToolBar */\n"
@@ -127,19 +125,20 @@ class Ui_MainWindow(object):
 "QToolBar::handle {\n"
 "    background-color: #5b5e60;      /* Light gray handle for draggable toolbars */\n"
 "    width: 10px;                    /* Width of the handle */\n"
+"	height: 10px;\n"
 "    margin: 4px;                    /* Margin around the handle */\n"
 "}\n"
 "\n"
 "QToolBar::separator {\n"
 "    background-color: #5b5e60;      /* Light gray for separators */\n"
 "    width: 1px;                     /* Thickness of the separator */\n"
-"    height: 24px;                   /* Height of the separator */"
-                        "\n"
+"    height: 24px;                   /* Height of the separator */\n"
 "    margin: 6px;                    /* Space around the separator */\n"
 "}\n"
 "\n"
 "QToolBar::item {\n"
-"    padding: 4px;                   /* Padding for individual toolbar items */\n"
+"    padding: 4px;  "
+                        "                 /* Padding for individual toolbar items */\n"
 "}\n"
 "\n"
 "/* QToolButton in Toolbar */\n"
@@ -162,11 +161,11 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QToolButton:checked {\n"
-"    background-colo"
-                        "r: #3d78b2;      /* Darker blue when checked */\n"
+"    background-color: #3d78b2;      /* Darker blue when checked */\n"
 "    border-color: #2a5f92;          /* Border color when checked */\n"
 "}\n"
-"\n"
+""
+                        "\n"
 "QToolButton:disabled {\n"
 "    background-color: #2e2e2e;      /* Dark gray when disabled */\n"
 "    color: #777777;                 /* Lighter gray text/icon for disabled state */\n"
@@ -187,13 +186,13 @@ class Ui_MainWindow(object):
 "\n"
 "QToolButton::menu-button:pressed {\n"
 "    background-color: #3d78b2;      /* Darker blue on press */\n"
-""
-                        "    border-color: #2a5f92;          /* Even darker border on press */\n"
+"    border-color: #2a5f92;          /* Even darker border on press */\n"
 "}\n"
 "\n"
 "/* QStatusBar */\n"
 "QStatusBar {\n"
-"    background-color: #2e2e2e;   /* Dark gray background */\n"
+"    "
+                        "background-color: #2e2e2e;   /* Dark gray background */\n"
 "    border-top: 1px solid #5b5e60; /* Light gray top border for separation */\n"
 "    color: #ffffff;              /* White text */\n"
 "    font-size: 13px;             /* Slightly smaller font for the status bar */\n"
@@ -211,12 +210,12 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QStatusBar::indicator {\n"
-"    background-color: #4a90e2;   /* Optional indicator styling, e.g., for icons or s"
-                        "tatus signals */\n"
+"    background-color: #4a90e2;   /* Optional indicator styling, e.g., for icons or status signals */\n"
 "    border-radius: 4px;          /* Rounded corners for any indicator elements */\n"
 "}\n"
 "\n"
-"/* Scroll Area Styling (optional) */\n"
+"/* Scroll"
+                        " Area Styling (optional) */\n"
 "QScrollArea {\n"
 "    background-color: transparent; /* Transparent to match the central widget */\n"
 "    border: none;                  /* No border */\n"
@@ -241,10 +240,10 @@ class Ui_MainWindow(object):
 "QPushButton {\n"
 "    background-color: #3c3f41;  /* Dark gray background */\n"
 "    color: #ffffff;             /* White text */\n"
-"   "
-                        " border: 1px solid #5b5e60;  /* Light gray border */\n"
+"    border: 1px solid #5b5e60;  /* Light gray border */\n"
 "    border-radius: 4px;         /* Rounded corners */\n"
-"	padding: 0px 0px;\n"
+"	padding: 0p"
+                        "x 0px;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
@@ -275,11 +274,11 @@ class Ui_MainWindow(object):
 "    border: 1px solid #5b5e60;  /* Light gray border */\n"
 "    border-radius: 4px;         /* Rounded corners */\n"
 "}\n"
-""
-                        "\n"
+"\n"
 "QLineEdit:focus {\n"
 "    border-color: #4a90e2;      /* Light blue border when focused */\n"
-"    background-color: #333333;  /* Slightly lighter gray on focus */\n"
+"    background-color: #3"
+                        "33333;  /* Slightly lighter gray on focus */\n"
 "}\n"
 "\n"
 "/* QPlainTextEdit */\n"
@@ -301,12 +300,12 @@ class Ui_MainWindow(object):
 "/* QRadioButton */\n"
 "QRadioButton {\n"
 "    color: #ffffff;              /* White text */\n"
-"    font-size: 14px;             /* "
-                        "Font size for readability */\n"
+"    font-size: 14px;             /* Font size for readability */\n"
 "    spacing: 5px;                /* Space between radio button and label */\n"
 "}\n"
 "\n"
-"QRadioButton::indicator {\n"
+""
+                        "QRadioButton::indicator {\n"
 "    width: 16px;                 /* Size of the radio button */\n"
 "    height: 16px;\n"
 "    background-color: #2e2e2e;   /* Dark gray background for the indicator */\n"
@@ -329,10 +328,10 @@ class Ui_MainWindow(object):
 "    border-color: #2a5f92;       /* Even darker border on press */\n"
 "}\n"
 "\n"
-"QRadio"
-                        "Button::indicator:checked:pressed {\n"
+"QRadioButton::indicator:checked:pressed {\n"
 "    background-color: #3d78b2;   /* Darker blue when checked and pressed */\n"
-"    border-color: #2a5f92;       /* Even darker border when checked and pressed */\n"
+"    "
+                        "border-color: #2a5f92;       /* Even darker border when checked and pressed */\n"
 "}\n"
 "\n"
 "/* QToolButton */\n"
@@ -353,12 +352,12 @@ class Ui_MainWindow(object):
 "QToolButton:pressed {\n"
 "    background-color: #3d78b2;    /* Darker blue background on press */\n"
 "    border-color: #2a5f92;        /* Even darker border when pressed */\n"
-""
-                        "}\n"
+"}\n"
 "\n"
 "QToolButton:checked {\n"
 "    background-color: #3d78b2;    /* Darker blue when checked */\n"
-"    border-color: #2a5f92;        /* Border color when checked */\n"
+"    border-colo"
+                        "r: #2a5f92;        /* Border color when checked */\n"
 "}\n"
 "\n"
 "QToolButton:disabled {\n"
@@ -424,19 +423,13 @@ class Ui_MainWindow(object):
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
         self.frame_4 = QFrame(self.frame_3)
         self.frame_4.setObjectName(u"frame_4")
+        self.frame_4.setMaximumSize(QSize(351, 16777215))
         self.frame_4.setStyleSheet(u"QFrame {margin: 0px;}")
         self.frame_4.setFrameShape(QFrame.Shape.NoFrame)
         self.frame_4.setFrameShadow(QFrame.Shadow.Raised)
         self.verticalLayout_2 = QVBoxLayout(self.frame_4)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
-        self.frame_5 = QFrame(self.frame_4)
-        self.frame_5.setObjectName(u"frame_5")
-        self.frame_5.setFrameShape(QFrame.Shape.NoFrame)
-        self.frame_5.setFrameShadow(QFrame.Shadow.Raised)
-        self.verticalLayout_5 = QVBoxLayout(self.frame_5)
-        self.verticalLayout_5.setObjectName(u"verticalLayout_5")
-        self.verticalLayout_5.setContentsMargins(0, 0, 0, 0)
-        self.frame_7 = QFrame(self.frame_5)
+        self.frame_7 = QFrame(self.frame_4)
         self.frame_7.setObjectName(u"frame_7")
         self.frame_7.setFrameShape(QFrame.Shape.NoFrame)
         self.frame_7.setFrameShadow(QFrame.Shadow.Raised)
@@ -454,14 +447,14 @@ class Ui_MainWindow(object):
         self.horizontalLayout_2.addWidget(self.lineEdit)
 
 
-        self.verticalLayout_5.addWidget(self.frame_7)
+        self.verticalLayout_2.addWidget(self.frame_7)
 
-        self.frame_8 = QFrame(self.frame_5)
+        self.frame_8 = QFrame(self.frame_4)
         self.frame_8.setObjectName(u"frame_8")
         self.frame_8.setFrameShape(QFrame.Shape.NoFrame)
         self.frame_8.setFrameShadow(QFrame.Shadow.Raised)
         self.verticalLayout_3 = QVBoxLayout(self.frame_8)
-        self.verticalLayout_3.setSpacing(3)
+        self.verticalLayout_3.setSpacing(6)
         self.verticalLayout_3.setObjectName(u"verticalLayout_3")
         self.verticalLayout_3.setContentsMargins(0, 0, 0, 0)
         self.frame_9 = QFrame(self.frame_8)
@@ -469,13 +462,13 @@ class Ui_MainWindow(object):
         self.frame_9.setFrameShape(QFrame.Shape.NoFrame)
         self.frame_9.setFrameShadow(QFrame.Shadow.Raised)
         self.horizontalLayout_3 = QHBoxLayout(self.frame_9)
-        self.horizontalLayout_3.setSpacing(3)
+        self.horizontalLayout_3.setSpacing(6)
         self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
         self.horizontalLayout_3.setContentsMargins(0, 0, 0, 0)
         self.pushButton = QPushButton(self.frame_9)
         self.pushButton.setObjectName(u"pushButton")
         font = QFont()
-        font.setPointSize(8)
+        font.setPointSize(9)
         self.pushButton.setFont(font)
 
         self.horizontalLayout_3.addWidget(self.pushButton)
@@ -506,7 +499,7 @@ class Ui_MainWindow(object):
         self.frame_10.setFrameShape(QFrame.Shape.NoFrame)
         self.frame_10.setFrameShadow(QFrame.Shadow.Raised)
         self.horizontalLayout_4 = QHBoxLayout(self.frame_10)
-        self.horizontalLayout_4.setSpacing(3)
+        self.horizontalLayout_4.setSpacing(6)
         self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
         self.horizontalLayout_4.setContentsMargins(0, 0, 0, 0)
         self.pushButton_5 = QPushButton(self.frame_10)
@@ -539,37 +532,37 @@ class Ui_MainWindow(object):
         self.verticalLayout_3.addWidget(self.frame_10)
 
 
-        self.verticalLayout_5.addWidget(self.frame_8)
+        self.verticalLayout_2.addWidget(self.frame_8)
 
-        self.listWidget = QListWidget(self.frame_5)
+        self.listWidget = QListWidget(self.frame_4)
         self.listWidget.setObjectName(u"listWidget")
         self.listWidget.setFrameShape(QFrame.Shape.NoFrame)
         self.listWidget.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
 
-        self.verticalLayout_5.addWidget(self.listWidget)
+        self.verticalLayout_2.addWidget(self.listWidget)
 
-        self.listWidget_2 = QListWidget(self.frame_5)
+        self.listWidget_2 = QListWidget(self.frame_4)
         self.listWidget_2.setObjectName(u"listWidget_2")
         self.listWidget_2.setFrameShape(QFrame.Shape.NoFrame)
         self.listWidget_2.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
 
-        self.verticalLayout_5.addWidget(self.listWidget_2)
-
-
-        self.verticalLayout_2.addWidget(self.frame_5)
+        self.verticalLayout_2.addWidget(self.listWidget_2)
 
 
         self.horizontalLayout.addWidget(self.frame_4)
 
         self.frame = QFrame(self.frame_3)
         self.frame.setObjectName(u"frame")
+        sizePolicy1 = QSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Preferred)
+        sizePolicy1.setHorizontalStretch(0)
+        sizePolicy1.setVerticalStretch(0)
+        sizePolicy1.setHeightForWidth(self.frame.sizePolicy().hasHeightForWidth())
+        self.frame.setSizePolicy(sizePolicy1)
         self.frame.setFrameShape(QFrame.Shape.NoFrame)
         self.frame.setFrameShadow(QFrame.Shadow.Raised)
 
         self.horizontalLayout.addWidget(self.frame)
 
-        self.horizontalLayout.setStretch(0, 1)
-        self.horizontalLayout.setStretch(1, 2)
 
         self.verticalLayout.addWidget(self.frame_3)
 
