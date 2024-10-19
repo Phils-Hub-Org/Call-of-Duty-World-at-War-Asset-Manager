@@ -17,7 +17,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>Phils-Hub - Drag N Drop Asset Manager</string>
+   <string>Phils-Hub - WaW Asset Manager</string>
   </property>
   <property name="styleSheet">
    <string notr="true">/* Central Widget */
@@ -52,13 +52,13 @@ QMenuBar::item:pressed {           /* Pressed menu item */
 QMenu {
     background-color: #2e2e2e;     /* Dark gray background for menus */
     border: 1px solid #5b5e60;     /* Light gray border */
-    padding: 6px;                  /* Padding inside the menu */
 }
 
 QMenu::item {
     background-color: transparent; /* Transparent background for menu items */
     color: #ffffff;                /* White text */
-    padding: 6px 12px;             /* Padding for each menu item */
+	padding: 6px;
+    margin-left: 6px;             /* Padding for each menu item */
 }
 
 QMenu::item:selected {             /* Hovered menu item */
@@ -74,7 +74,6 @@ QMenu::item:pressed {              /* Pressed menu item */
 QMenu::separator {
     height: 1px;
     background-color: #5b5e60;     /* Light gray separator between items */
-    margin: 6px 0;                 /* Spacing around the separator */
 }
 
 /* QMenu::indicator (checkboxes and radio buttons in menus) */
@@ -94,12 +93,6 @@ QMenu::indicator:checked {
 QMenu::indicator:unchecked {
     background-color: #2e2e2e;     /* Keep the dark gray when unchecked */
     border-color: #5b5e60;         /* Light gray border when unchecked */
-}
-
-/* Submenus */
-QMenu::right-arrow {
-    image: url(':/icons/right-arrow.png'); /* Replace with an appropriate icon path */
-    padding: 0px 10px;                     /* Space before submenu arrows */
 }
 
 /* QToolBar */
@@ -126,53 +119,6 @@ QToolBar::separator {
 
 QToolBar::item {
     padding: 4px;                   /* Padding for individual toolbar items */
-}
-
-/* QToolButton in Toolbar */
-QToolButton {
-    background-color: #3c3f41;      /* Dark gray background for toolbar buttons */
-    color: #ffffff;                 /* White text/icon */
-    border: 1px solid #5b5e60;      /* Light gray border */
-    border-radius: 4px;             /* Rounded corners */
-    padding: 6px 12px;              /* Padding for comfortable button size */
-}
-
-QToolButton:hover {
-    background-color: #4a90e2;      /* Light blue on hover */
-    border-color: #3d78b2;          /* Darker blue border on hover */
-}
-
-QToolButton:pressed {
-    background-color: #3d78b2;      /* Darker blue on press */
-    border-color: #2a5f92;          /* Even darker border when pressed */
-}
-
-QToolButton:checked {
-    background-color: #3d78b2;      /* Darker blue when checked */
-    border-color: #2a5f92;          /* Border color when checked */
-}
-
-QToolButton:disabled {
-    background-color: #2e2e2e;      /* Dark gray when disabled */
-    color: #777777;                 /* Lighter gray text/icon for disabled state */
-    border-color: #5b5e60;          /* Keep the border color same as normal state */
-}
-
-/* QToolButton::menu-button */
-QToolButton::menu-button {
-    background-color: #3c3f41;      /* Dark gray background for menu button */
-    border: 1px solid #5b5e60;      /* Light gray border for menu button */
-    padding: 4px;                   /* Padding for the menu button */
-}
-
-QToolButton::menu-button:hover {
-    background-color: #4a90e2;      /* Light blue on hover */
-    border-color: #3d78b2;          /* Darker blue border on hover */
-}
-
-QToolButton::menu-button:pressed {
-    background-color: #3d78b2;      /* Darker blue on press */
-    border-color: #2a5f92;          /* Even darker border on press */
 }
 
 /* QStatusBar */
@@ -220,25 +166,6 @@ QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
     background: none;             /* Remove arrows */
 }
 
-/* QPushButton */
-QPushButton {
-    background-color: #3c3f41;  /* Dark gray background */
-    color: #ffffff;             /* White text */
-    border: 1px solid #5b5e60;  /* Light gray border */
-    border-radius: 4px;         /* Rounded corners */
-	padding: 0px 0px;
-}
-
-QPushButton:hover {
-    background-color: #4a90e2;  /* Light blue on hover */
-    border-color: #3d78b2;      /* Darker blue border */
-}
-
-QPushButton:pressed {
-    background-color: #3d78b2;  /* Darker blue on press */
-    border-color: #2a5f92;      /* Even darker border when pressed */
-}
-
 /* QLabel */
 QLabel {
     color: #ffffff;             /* White text */
@@ -263,6 +190,35 @@ QLineEdit:focus {
     background-color: #333333;  /* Slightly lighter gray on focus */
 }
 
+/* QListWidget */
+QListWidget {
+    background-color: #2e2e2e;      /* Dark gray background */
+    color: #ffffff;                 /* White text */
+    border: 1px solid #5b5e60;      /* Light gray border */
+    padding: 4px;                   /* Padding around the list */
+}
+
+QListWidget::item {
+    background-color: transparent;  /* Transparent background for items */
+    color: #ffffff;                 /* White text for list items */
+    border: none;                   /* No border for list items */
+}
+
+QListWidget::item:selected {
+    background-color: #4a90e2;      /* Light blue background when selected */
+    color: #ffffff;                 /* Ensure text remains white when selected */
+}
+
+QListWidget::item:hover {
+    background-color: #3d78b2;      /* Darker blue on hover */
+    color: #ffffff;                 /* Ensure text remains white when hovered */
+}
+
+QListWidget::item:focus {
+    border: 1px solid #4a90e2;      /* Light blue border on focus */
+}
+
+
 /* QPlainTextEdit */
 QPlainTextEdit {
     background-color: #2b2b2b;  /* Darker gray background for text area */
@@ -277,6 +233,25 @@ QPlainTextEdit {
 QPlainTextEdit:focus {
     border-color: #4a90e2;      /* Light blue border on focus */
     background-color: #3a3a3a;  /* Slightly lighter gray on focus */
+}
+
+/* QPushButton */
+QPushButton {
+    background-color: #3c3f41;  /* Dark gray background */
+    color: #ffffff;             /* White text */
+    border: 1px solid #5b5e60;  /* Light gray border */
+    border-radius: 4px;         /* Rounded corners */
+	padding: 0px 0px;
+}
+
+QPushButton:hover {
+    background-color: #4a90e2;  /* Light blue on hover */
+    border-color: #3d78b2;      /* Darker blue border */
+}
+
+QPushButton:pressed {
+    background-color: #3d78b2;  /* Darker blue on press */
+    border-color: #2a5f92;      /* Even darker border when pressed */
 }
 
 /* QRadioButton */
@@ -321,7 +296,6 @@ QToolButton {
     border: 1px solid #5b5e60;    /* Light gray border */
     border-radius: 4px;           /* Rounded corners */
     padding: 6px 12px;            /* Padding for comfortable button size */
-    font-size: 14px;              /* Font size for text (if any) */
 }
 
 QToolButton:hover {
@@ -344,7 +318,23 @@ QToolButton:disabled {
     color: #777777;               /* Lighter gray text/icon for disabled state */
     border-color: #5b5e60;        /* Keep the border color same as normal state */
 }
-</string>
+
+/* QToolButton::menu-button */
+QToolButton::menu-button {
+    background-color: #3c3f41;      /* Dark gray background for menu button */
+    border: 1px solid #5b5e60;      /* Light gray border for menu button */
+    padding: 4px;                   /* Padding for the menu button */
+}
+
+QToolButton::menu-button:hover {
+    background-color: #4a90e2;      /* Light blue on hover */
+    border-color: #3d78b2;          /* Darker blue border on hover */
+}
+
+QToolButton::menu-button:pressed {
+    background-color: #3d78b2;      /* Darker blue on press */
+    border-color: #2a5f92;          /* Even darker border on press */
+}</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="styleSheet">
@@ -367,33 +357,6 @@ QToolButton:disabled {
      <number>0</number>
     </property>
     <item>
-     <widget class="QFrame" name="frame_2">
-      <property name="frameShape">
-       <enum>QFrame::Shape::NoFrame</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Shadow::Raised</enum>
-      </property>
-      <layout class="QVBoxLayout" name="verticalLayout_4">
-       <property name="spacing">
-        <number>0</number>
-       </property>
-       <property name="leftMargin">
-        <number>0</number>
-       </property>
-       <property name="topMargin">
-        <number>0</number>
-       </property>
-       <property name="rightMargin">
-        <number>0</number>
-       </property>
-       <property name="bottomMargin">
-        <number>0</number>
-       </property>
-      </layout>
-     </widget>
-    </item>
-    <item>
      <widget class="QFrame" name="frame_3">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
@@ -402,7 +365,7 @@ QToolButton:disabled {
        </sizepolicy>
       </property>
       <property name="styleSheet">
-       <string notr="true">QFrame {margin-left: 6px; margin-right: 6px; margin-bottom: 6px;}</string>
+       <string notr="true">QFrame {margin: 6px;}</string>
       </property>
       <property name="frameShape">
        <enum>QFrame::Shape::NoFrame</enum>
@@ -509,7 +472,7 @@ QToolButton:disabled {
                </property>
                <layout class="QHBoxLayout" name="horizontalLayout_3">
                 <property name="spacing">
-                 <number>6</number>
+                 <number>5</number>
                 </property>
                 <property name="leftMargin">
                  <number>0</number>
@@ -525,6 +488,24 @@ QToolButton:disabled {
                 </property>
                 <item>
                  <widget class="QPushButton" name="pushButton">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>16777215</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
                   <property name="font">
                    <font>
                     <pointsize>9</pointsize>
@@ -537,6 +518,24 @@ QToolButton:disabled {
                 </item>
                 <item>
                  <widget class="QPushButton" name="pushButton_2">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>16777215</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
                   <property name="font">
                    <font>
                     <pointsize>9</pointsize>
@@ -549,6 +548,24 @@ QToolButton:disabled {
                 </item>
                 <item>
                  <widget class="QPushButton" name="pushButton_3">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>16777215</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
                   <property name="font">
                    <font>
                     <pointsize>9</pointsize>
@@ -561,6 +578,24 @@ QToolButton:disabled {
                 </item>
                 <item>
                  <widget class="QPushButton" name="pushButton_4">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>16777215</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
                   <property name="font">
                    <font>
                     <pointsize>9</pointsize>
@@ -575,16 +610,16 @@ QToolButton:disabled {
               </widget>
              </item>
              <item>
-              <widget class="QFrame" name="frame_10">
+              <widget class="QFrame" name="frame_11">
                <property name="frameShape">
                 <enum>QFrame::Shape::NoFrame</enum>
                </property>
                <property name="frameShadow">
                 <enum>QFrame::Shadow::Raised</enum>
                </property>
-               <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="1,1,1,1">
+               <layout class="QHBoxLayout" name="horizontalLayout_5">
                 <property name="spacing">
-                 <number>6</number>
+                 <number>5</number>
                 </property>
                 <property name="leftMargin">
                  <number>0</number>
@@ -598,45 +633,110 @@ QToolButton:disabled {
                 <property name="bottomMargin">
                  <number>0</number>
                 </property>
-                <item>
-                 <widget class="QPushButton" name="pushButton_5">
-                  <property name="font">
-                   <font>
-                    <pointsize>9</pointsize>
-                   </font>
+                <item alignment="Qt::AlignmentFlag::AlignLeft">
+                 <widget class="QFrame" name="frame_2">
+                  <property name="frameShape">
+                   <enum>QFrame::Shape::NoFrame</enum>
                   </property>
-                  <property name="text">
-                   <string>Rename Entry</string>
+                  <property name="frameShadow">
+                   <enum>QFrame::Shadow::Raised</enum>
                   </property>
+                  <layout class="QHBoxLayout" name="horizontalLayout_4">
+                   <property name="leftMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="topMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="rightMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="bottomMargin">
+                    <number>0</number>
+                   </property>
+                   <item>
+                    <widget class="QPushButton" name="pushButton_8">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>79</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>16777215</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <pointsize>9</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>Rename Entry</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="pushButton_10">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>79</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>16777215</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <pointsize>9</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>Copy Entry</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
                  </widget>
                 </item>
-                <item>
-                 <widget class="QPushButton" name="pushButton_6">
-                  <property name="font">
-                   <font>
-                    <pointsize>9</pointsize>
-                   </font>
+                <item alignment="Qt::AlignmentFlag::AlignRight">
+                 <widget class="QPushButton" name="pushButton_11">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
                   </property>
-                  <property name="text">
-                   <string>Copy Entry</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <spacer name="horizontalSpacer">
-                  <property name="orientation">
-                   <enum>Qt::Orientation::Horizontal</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
+                  <property name="minimumSize">
                    <size>
-                    <width>40</width>
-                    <height>20</height>
+                    <width>79</width>
+                    <height>0</height>
                    </size>
                   </property>
-                 </spacer>
-                </item>
-                <item>
-                 <widget class="QPushButton" name="pushButton_7">
+                  <property name="maximumSize">
+                   <size>
+                    <width>16777215</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
                   <property name="font">
                    <font>
                     <pointsize>9</pointsize>
@@ -654,23 +754,183 @@ QToolButton:disabled {
            </widget>
           </item>
           <item>
-           <widget class="QListWidget" name="listWidget">
+           <widget class="QFrame" name="frame_5">
+            <property name="styleSheet">
+             <string notr="true">QListWidget {background-color: #242424;}</string>
+            </property>
             <property name="frameShape">
              <enum>QFrame::Shape::NoFrame</enum>
             </property>
-            <property name="horizontalScrollBarPolicy">
-             <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
+            <property name="frameShadow">
+             <enum>QFrame::Shadow::Raised</enum>
             </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QListWidget" name="listWidget_2">
-            <property name="frameShape">
-             <enum>QFrame::Shape::NoFrame</enum>
-            </property>
-            <property name="horizontalScrollBarPolicy">
-             <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
-            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_5" stretch="1,3">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QListWidget" name="listWidget">
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::Shape::NoFrame</enum>
+               </property>
+               <property name="horizontalScrollBarPolicy">
+                <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
+               </property>
+               <item>
+                <property name="text">
+                 <string>aitype</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>bullet_penetration</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>bulletweapon</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>character</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>destructibledef</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>destructiblepiece</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>flametable</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>gasweapon</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>grenadeweapon</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>level</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>light</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>locdmgtable</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>material</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>material_factory</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>mptype</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>physconstraints</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>physpreset</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>projectileweapon</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>rumble</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>turretweapon</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>vehicle</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>vehiclephysparams</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>vehicleweapon</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>xanim</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>xmodel</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>xmodelalias</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item>
+              <widget class="QListWidget" name="listWidget_2">
+               <property name="frameShape">
+                <enum>QFrame::Shape::NoFrame</enum>
+               </property>
+               <property name="horizontalScrollBarPolicy">
+                <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
+               </property>
+              </widget>
+             </item>
+            </layout>
            </widget>
           </item>
          </layout>
@@ -755,7 +1015,7 @@ QToolButton:disabled {
     <property name="title">
      <string>PC Convert</string>
     </property>
-    <addaction name="actionCurrent_Asset_Only"/>
+    <addaction name="actionCurrent_Asset_Only_2"/>
     <addaction name="separator"/>
     <addaction name="actionAll_Assets"/>
    </widget>
@@ -775,14 +1035,6 @@ QToolButton:disabled {
     <string>About asset_manager...</string>
    </property>
   </action>
-  <action name="actionCurrent_Asset_Only">
-   <property name="text">
-    <string>Current Asset Only</string>
-   </property>
-   <property name="shortcut">
-    <string>F9</string>
-   </property>
-  </action>
   <action name="actionAll_Assets">
    <property name="text">
     <string>All Assets</string>
@@ -795,12 +1047,18 @@ QToolButton:disabled {
    <property name="checkable">
     <bool>true</bool>
    </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
    <property name="text">
     <string>Toolbar</string>
    </property>
   </action>
   <action name="actionStatus_Bar">
    <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
     <bool>true</bool>
    </property>
    <property name="text">
@@ -844,6 +1102,14 @@ QToolButton:disabled {
   <action name="actionExit">
    <property name="text">
     <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionCurrent_Asset_Only_2">
+   <property name="text">
+    <string>Current Asset Only</string>
+   </property>
+   <property name="shortcut">
+    <string>F10</string>
    </property>
   </action>
  </widget>
