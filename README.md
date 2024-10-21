@@ -6,8 +6,5 @@ Once completed, i'll then add additional features like:
   2) Auto power of 2
   3) Auto image extension conversion
   4) Save presets (more on this later)
-  5) ...
-
-Peace!
 
 This is a Phils-Hub community-contributed project.
